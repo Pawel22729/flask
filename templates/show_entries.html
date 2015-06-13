@@ -1,0 +1,20 @@
+<html>
+<body>
+
+<center>
+
+<h1>Sample Flask blog application</h1>
+<a href={{ url_for('link_test') }}>Link</a><br>
+<a href={{ url_for('add_entry') }}>Add entry</a><br>
+<a href={{ url_for('del_entry') }}>Del entry</a><br>
+{% for entry in entries %}
+
+    <b>{{ entry.title }}</b><br>
+    <p>{{  entry.text }}</p><br>
+
+{% endfor %}
+
+</center>
+
+</body>
+</html>
